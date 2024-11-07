@@ -12,8 +12,9 @@ body {
 
 
 div .géneral {
-flex-direction: row;
-justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 
@@ -25,11 +26,13 @@ div .dex {
 
 
 div .génération {
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 
 
 div .pokémon {
-align-content: flex-start;
+    display: flex;
+    align-content: flex-start;
 }
