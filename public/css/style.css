@@ -11,7 +11,7 @@ body {
 
 
 
-.géneral {
+#géneral article {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -19,20 +19,20 @@ body {
 
 
 
-.dex {
+#dex article {
 
 }
 
 
 
-.génération {
+#génération article {
     display: flex;
     flex-direction: column;
 }
 
 
 
-.pokémon {
+#pokémon article {
     display: flex;
     align-content: flex-start;
 }
