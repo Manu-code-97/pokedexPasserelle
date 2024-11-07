@@ -1,6 +1,6 @@
 @font-face {
-   font-family: "Pokemon GB"; 
-   src: url(../fonts/jackster-productions_pokemon-gb/Pokemon\ GB.ttf)
+    font-family: "Pokemon GB"; 
+    src: url(../fonts/jackster-productions_pokemon-gb/Pokemon\ GB.ttf)
 }
 
 
@@ -11,7 +11,7 @@ body {
 
 
 
-div .géneral {
+.géneral {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -19,20 +19,20 @@ div .géneral {
 
 
 
-div .dex {
+.dex {
 
 }
 
 
 
-div .génération {
+.génération {
     display: flex;
     flex-direction: column;
 }
 
 
 
-div .pokémon {
+.pokémon {
     display: flex;
     align-content: flex-start;
 }
