@@ -8,3 +8,28 @@
 body {
     font-family: "Pokemon GB";
 }
+
+
+
+div .géneral {
+flex-direction: row;
+justify-content: space-between;
+}
+
+
+
+div .dex {
+
+}
+
+
+
+div .génération {
+flex-direction: column;
+}
+
+
+
+div .pokémon {
+align-content: flex-start;
+}
