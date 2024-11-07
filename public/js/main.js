@@ -79,17 +79,28 @@ function refresh() {
 
     for (let i = 0; i < pokemons.length; i++) {
         cards.innerHTML += `
-        <li class="card" style="width: 18rem;">
-            <img src="${pokemons[i].sprites.front_default}" class="card-img-top" alt="${pokemons[i].name}">
-                <div class="card-body">
-                    <h5 class="card-title">${pokemons[i].name}</h5>
-                    <p class="card-text">Pokedex Index: ${pokemons[i].order}</p>
-                    <p class="card-text">Type: ${pokemons[i].types[0].type.name}</p>
-                </div>
-            </li>
-        `;
-
+        <div class="col-1">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iii/emerald/${pokemons[i].id}.png" class="card-img-top w-50 sprite" data-index="${pokemons[i].id}" alt="${pokemons[i].name}">
+        </div>`;
     }
+}
+
+function chosePokemon(event) {
+    let sprite = document.querySelectorAll('img.sprite');
+    console.log(sprite);
+    for (const element of sprite) {
+        element.addEventListener('click', test);
+    }
+}
+
+function changeFocusPokemon(index) {
+    let pokeImage = document.getElementById('pokeImage');
+    pokeImage.innerHTML = `<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index}.png" class="fixed-top" alt="${index}">`;
+}
+
+function test(event) {
+    let index = event.currentTarget.dataset.index;
+    changeFocusPokemon(index);
 }
 
 //MAIN CODE
