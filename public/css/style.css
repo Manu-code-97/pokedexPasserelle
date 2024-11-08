@@ -11,6 +11,12 @@ body {
 
 
 
+main h1{
+    background-color: orangered;
+}
+
+
+
 #géneral article {
     background-color: lightblue;
     display: flex;
