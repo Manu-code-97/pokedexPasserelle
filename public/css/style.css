@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "Pokemon GB"; 
+    src: url(../fonts/jackster-productions_pokemon-gb/Pokemon\ GB.ttf)
+}
+
+
+
+body {
+    font-family: "Pokemon GB";
+}
+
+
+
+main h1{
+    background-color: orangered;
+}
+
+
+
+#géneral article {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+#dex article {
+    background-color: lightblue;
+}
+
+
+
+#génération article {
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+#pokémon article {
+    background-color: lightblue;
+    display: flex;
+    align-content: flex-start;
+}
