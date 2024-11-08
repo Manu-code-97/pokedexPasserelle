@@ -12,6 +12,7 @@ body {
 
 
 #géneral article {
+    background-color: lightblue;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -20,12 +21,13 @@ body {
 
 
 #dex article {
-
+    background-color: green;
 }
 
 
 
 #génération article {
+    background-color: grey;
     display: flex;
     flex-direction: column;
 }
@@ -33,6 +35,7 @@ body {
 
 
 #pokémon article {
+    background-color: lightblue;
     display: flex;
     align-content: flex-start;
 }
