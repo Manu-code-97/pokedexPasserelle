@@ -10,3 +10,9 @@ function loadData(name){
     let data = JSON.parse(data_json);
     return data
 }
+
+
+function test() {
+    console.log('hi');
+    
+}

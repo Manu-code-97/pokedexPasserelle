@@ -58,23 +58,8 @@ function genPokemon() {
     for (let i = 0; i < poke.length; i++) {
         for (let j = 0; j < poke[i].length; j++) {
             promises.push(getPokemon(poke[i][j].name));
-            // refresh();
         }
-    }
-
-    // setTimeout(() => {
-    //     saveData(pokedexData, pokemons);
-
-    // }, 5000);
-
-    // Promise.all(promises)
-    // .then(() => {
-    //     console.log(pokemons);
-    //     saveData(pokedexData, pokemons)
-    // })
-    // .catch((err) => {
-    //     console.log(err);
-    // });        
+    }      
 }
 
 function refresh() {
@@ -113,7 +98,7 @@ function combat() {
                         <div id="playerHpBarPercent" class="progress-bar bg-success" style="width: 100%"></div>
                     </div>
                 </div>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${pokemons[pickedPokemon].id}.png" class="card-img-top w-50" alt="${pokemons[pickedPokemon].name}">
+                <img id="playerPokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${pokemons[pickedPokemon].id}.png" class="card-img-top w-50" alt="${pokemons[pickedPokemon].name}">
             </div>
 
             <div id="computer" class="col-6">
@@ -122,7 +107,7 @@ function combat() {
                         <div class="progress-bar bg-danger" style="width: 100%"></div>
                     </div>
                 </div>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemons[npc].id}.png" class="card-img-top w-50" alt="${pokemons[npc].name}">
+                <img id="npcPokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemons[npc].id}.png" class="card-img-top w-50" alt="${pokemons[npc].name}">
             </div>
         </div>
         <div id="menuScreen" class=" container bg-secondary-subtle">
@@ -158,7 +143,6 @@ function combat() {
 
 function chosePokemon(event) {
     let sprite = document.querySelectorAll('div.sprite');
-    console.log(sprite);
     for (const element of sprite) {
         element.addEventListener('click', currentTarget);
     }
@@ -167,7 +151,7 @@ function chosePokemon(event) {
 function changeFocusPokemon(index,pokemons) {
     let pokeImage = document.getElementById('pokeImage');
     pokeImage.innerHTML = `
-    <div>
+    <div class="text-center">
         <div>
             <div>
                 <p>N°: ${index}</p>
@@ -205,34 +189,11 @@ function currentTarget(event) {
     changeFocusPokemon(index, pokemons);
 }
 
-function test() {
-    console.log('hi');
-    
-}
-
 function attack(){
     let dmg = Math.floor(Math.random()*pokemons[pickedPokemon].stats[1].base_stat);
     let hp1 = document.getElementById('hp1');
     let hp2 = document.getElementById('hp2');
-    /* if (playerCurrentHp <= 0){
-        alert('GAME OVER!');
-    } else if (npcCurrentHp <= 0) {
-        alert('VICTORY!');
-    }else{
-        playerCurrentHp -= dmg;
-        percentHP = Math.round((playerCurrentHp * 100)/playerFullHp);
-        hp1.innerHTML = `
-        <div id="playerHpBar" class="progress" role="progressbar" aria-label="Success example" aria-valuenow="${playerCurrentHp}" aria-valuemin="0" aria-valuemax="${playerFullHp}">
-            <div class="progress-bar bg-success" style="width: ${percentHP}%"></div>
-        </div>`;
-        dmg = Math.floor(Math.random()*pokemons[pickedPokemon].stats[1].base_stat);
-        npcCurrentHp -= dmg;
-        percentHP = Math.round((npcCurrentHp * 100)/npcFullHp);
-        hp2.innerHTML = `
-        <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="${npcCurrentHp}" aria-valuemin="0" aria-valuemax="${npcFullHp}">
-            <div class="progress-bar bg-danger" style="width: ${percentHP}%"></div>
-        </div>`;
-    } */
+
     playerCurrentHp -= dmg;
     percentHP = Math.round((playerCurrentHp * 100)/playerFullHp);
     hp1.innerHTML = `

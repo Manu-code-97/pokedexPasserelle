@@ -13,15 +13,14 @@ body {
 
 main h1{
     background-color: orangered;
+    text-align: center;
+    margin-bottom: 0;
 }
 
 
 
 #géneral article {
     background-color: lightblue;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 
@@ -36,12 +35,20 @@ main h1{
     background-color: grey;
     display: flex;
     flex-direction: column;
-}
 
+    div{
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
 
 
 #pokémon article {
     background-color: lightblue;
     display: flex;
     align-content: flex-start;
+}
+
+.pokeImage{
+    margin-left: auto;
 }
